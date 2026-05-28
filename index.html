@@ -1,213 +1,624 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>당산 유흥 룩북 | 프리미엄 유흥 정보 플랫폼</title>
+  <meta name="description" content="당산 지역 유흥 정보의 기준. 룩북 기반 프리미엄 매장 가이드, 업소별 실사 후기 및 트렌드 분석. 전문가가 검증한 당산 유흥 룩북을 만나보세요.">
+  <meta name="keywords" content="당산 유흥 룩북, 당산 유흥, 당산 룩북, 유흥 정보, 프리미엄 유흥">
+  <meta name="bpaas-design-system" content="brutalist-avantgarde">
+  <meta name="bpaas-design-theme" content="kr-neon-void">
+  <meta name="author" content="T3B02 DS Night Look">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://t3b02-ds-night-look.pages.dev/">
+
+  <!-- OG 메타 -->
+  <meta property="og:title" content="당산 유흥 룩북 | 프리미엄 유흥 정보 플랫폼">
+  <meta property="og:description" content="당산 지역 유흥 정보의 기준. 룩북 기반 프리미엄 매장 가이드, 업소별 실사 후기 및 트렌드 분석.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://t3b02-ds-night-look.pages.dev/">
+  <meta property="og:site_name" content="당산 유흥 룩북">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://t3b02-ds-night-look.pages.dev/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="당산 유흥 룩북 | 프리미엄 유흥 정보 플랫폼">
+  <meta name="twitter:description" content="당산 지역 유흥 정보의 기준. 룩북 기반 프리미엄 매장 가이드, 업소별 실사 후기 및 트렌드 분석.">
+  <meta name="twitter:image" content="https://t3b02-ds-night-look.pages.dev/og-image.jpg">
+
+  <!-- JSON-LD 스키마 (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "당산 유흥 룩북",
+    "alternateName": "T3B02 DS Night Look",
+    "description": "당산 지역 프리미엄 유흥 정보 플랫폼. 룩북 기반 매장 가이드 및 검증된 후기 제공.",
+    "url": "https://t3b02-ds-night-look.pages.dev/",
+    "telephone": "+82-10-6279-0862",
+    "areaServed": {
+      "@type": "City",
+      "name": "당산"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "당산",
+      "addressCountry": "KR"
+    },
+    "openingHours": "Mo-Su 18:00-06:00",
+    "priceRange": "₩₩₩₩"
+  }
+  </script>
+
   <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    /* CSS 리셋 및 베이스 */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
+      font-family: Impact, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
     }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
+
+    /* 타이포그래피 시스템 — 거친 브루탈리스트 */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Impact, system-ui, sans-serif;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
+      letter-spacing: 0.02em;
+      color: #ffffff;
     }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
+
     h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
+      font-size: clamp(3.2rem, 12vw, 6rem);
+      line-height: 0.9;
+      margin-bottom: 0.25em;
+      word-break: break-word;
     }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
+
+    h2 {
+      font-size: clamp(2.4rem, 8vw, 4rem);
+      line-height: 1.0;
+      margin-bottom: 0.4em;
+      border-left: 6px solid #ff3b00;
+      padding-left: 0.4em;
+    }
+
+    h3 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      line-height: 1.0;
+      margin-bottom: 0.6em;
+    }
+
+    p, li, blockquote, figcaption {
+      font-family: system-ui, sans-serif;
       font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e0e0e0;
     }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      transition: color 0.15s ease;
+    }
+
+    a:hover, a:focus {
+      color: #ff3b00;
+    }
+
+    strong, b {
+      color: #ffffff;
       font-weight: 700;
-      transition: all 0.3s ease;
     }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
+
+    /* 컨테이너 — full bleed */
+    .container {
+      width: 100%;
+      max-width: none;
+      padding: 0 72px;
     }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
+
+    /* 섹션 그리드 — 비대칭 블록 */
+    section {
+      padding: 72px 0;
+      margin-bottom: 120px;
+      position: relative;
     }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
+
+    .section-gap {
+      height: 120px;
+    }
+
+    /* 버튼 & 인풋 — 브루탈리스트 스타일 */
+    .btn {
+      display: inline-block;
+      font-family: Impact, system-ui, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
+      letter-spacing: 0.06em;
+      padding: 18px 44px;
+      background-color: #ff3b00;
+      color: #ffffff;
+      border: 4px solid #ffffff;
       text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
+      transition: all 0.12s ease;
+      cursor: pointer;
+      box-shadow: 8px 8px 0 rgba(255,59,0,0.3);
     }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
+
+    .btn:hover, .btn:focus {
+      background-color: #ffffff;
+      color: #000000;
+      border-color: #ff3b00;
+      box-shadow: 12px 12px 0 rgba(255,59,0,0.5);
+      transform: translate(-4px, -4px);
+    }
+
+    /* 테두리 시스템 — 3~4px solid */
+    .border-thick {
+      border: 4px solid #ffffff;
+    }
+    .border-accent {
+      border: 4px solid #ff3b00;
+    }
+
+    /* 이미지/그래픽 — CSS 텍스처 & SVG 대체 */
+    .visual-placeholder {
+      width: 100%;
+      min-height: 320px;
+      background: repeating-linear-gradient(
+        45deg,
+        #1a1a1a 0px,
+        #1a1a1a 8px,
+        #ff3b00 8px,
+        #ff3b00 10px,
+        #000000 10px,
+        #000000 18px
+      );
+      border: 4px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 4px 4px 0 #000000;
+      position: relative;
+    }
+
+    .visual-placeholder::after {
+      content: "▼▼▼";
+      font-family: Impact, system-ui, sans-serif;
+      font-size: 6rem;
+      opacity: 0.8;
+      letter-spacing: -0.05em;
+      color: #ffffff;
+      mix-blend-mode: overlay;
+    }
+
+    /* 네비게이션 / 헤더 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #000000;
+      border-bottom: 4px solid #ffffff;
+      padding: 24px 72px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: Impact, system-ui, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      line-height: 1;
+      border: 4px solid #ff3b00;
+      padding: 8px 16px;
+      transform: skew(-6deg);
+      display: inline-block;
+    }
+
+    .logo:hover {
+      background-color: #ff3b00;
+      color: #000000;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: Impact, system-ui, sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      padding: 8px 0;
+      border-bottom: 4px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
     }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
+
+    .nav-links a:hover, .nav-links a:focus {
+      border-bottom-color: #ff3b00;
+      color: #ff3b00;
     }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
+
+    /* 햄버거 메뉴 — 모바일 */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 40px;
+      height: 6px;
+      background-color: #ffffff;
+      border-radius: 0;
+      transition: all 0.2s;
+    }
+
+    #nav-toggle {
+      display: none;
+    }
+
+    #nav-toggle:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 24px 0;
+      gap: 24px;
+      border-top: 4px solid #ff3b00;
+      margin-top: 16px;
+    }
+
+    /* 히어로 */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 72px 0;
+      margin-bottom: 120px;
+    }
+
+    .hero-content {
+      border-left: 8px solid #ff3b00;
+      padding-left: 32px;
+    }
+
+    .hero-visual {
+      transform: rotate(2deg) scale(1.02);
+      min-height: 420px;
+    }
+
+    /* 리뷰 카드 그리드 */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 48px;
+      margin-top: 48px;
+    }
+
+    .review-card {
+      background-color: #111111;
+      border: 4px solid #ffffff;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transform: rotate(-0.5deg);
+      transition: transform 0.2s;
+    }
+
+    .review-card:hover {
+      transform: rotate(0deg) scale(1.01);
+      border-color: #ff3b00;
+    }
+
+    .review-meta {
       display: flex;
       justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
+      align-items: center;
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: #aaaaaa;
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
     }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
+
+    .review-stars {
+      color: #ff3b00;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
     }
+
+    .review-body {
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    /* 비대칭 블록 */
+    .asymmetric-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .asymmetric-grid-rev {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .overlap-block {
+      margin-top: -80px;
+      margin-left: -40px;
+      background-color: #000000;
+      border: 6px solid #ff3b00;
+      padding: 48px 40px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* 연락처 */
+    .contact-block {
+      background-color: #0a0a0a;
+      border: 4px solid #ffffff;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .contact-block a {
+      font-size: 2rem;
+      font-family: Impact, system-ui, sans-serif;
+      color: #ff3b00;
+      text-decoration: underline;
+    }
+
+    /* 푸터 */
+    footer {
+      border-top: 6px solid #ffffff;
+      padding: 72px 0;
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+
+      header {
+        padding: 16px 24px;
+      }
+
+      .header-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        gap: 16px;
+        padding: 16px 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 0;
+      }
+
+      .hero-content {
+        border-left-width: 6px;
+        padding-left: 16px;
+      }
+
+      .hero-visual {
+        min-height: 240px;
+      }
+
+      .asymmetric-grid,
+      .asymmetric-grid-rev {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .overlap-block {
+        margin-top: 0;
+        margin-left: 0;
+        padding: 24px;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-block a {
+        font-size: 1.4rem;
+      }
+
+      section {
+        padding: 48px 0;
+        margin-bottom: 80px;
+      }
+
+      .section-gap {
+        height: 80px;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        border-left-width: 4px;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        padding: 14px 28px;
+      }
+    }
+
+    /* 아주 작은 화면 대비 */
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .logo {
+        font-size: 1.6rem;
+        padding: 4px 12px;
+      }
+
+      .nav-links a {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* 유틸 */
+    .text-accent {
+      color: #ff3b00;
+    }
+
+    .mt-48 { margin-top: 48px; }
+    .mb-48 { margin-bottom: 48px; }
+    .gap-48 { gap: 48px; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
+
+  <!-- 헤더 -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">T3B02·DS</a>
+
+      <input type="checkbox" id="nav-toggle" hidden>
+      <label for="nav-toggle" class="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">홈</a></li>
+          <li><a href="#lookbook">룩북</a></li>
+          <li><a href="#reviews">후기</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 히어로 섹션 -->
+    <section id="home" class="hero" style="margin-bottom:120px;">
+      <div class="hero-content">
+        <h1 style="font-size:clamp(3.8rem, 14vw, 7rem); line-height:0.85;">당산<br>유흥<br>룩북</h1>
+        <p style="font-size:1.4rem; font-weight:600; color:#ff3b00; margin: 24px 0 12px 0; text-transform:uppercase; letter-spacing:0.06em;">프리미엄 유흥 정보의 기준</p>
+        <p style="font-size:1.2rem; margin-bottom:32px;">검증된 매장, 정확한 룩북, 업계 전문가의 데이터 기반 분석.<br>당신의 선택에 확신을 더합니다.</p>
+        <a href="tel:+821062790862" class="btn">010-6279-0862</a>
       </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
+      <div class="visual-placeholder hero-visual"></div>
+    </section>
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+    <!-- 룩북 섹션 (비대칭) -->
+    <section id="lookbook">
+      <div class="asymmetric-grid">
+        <div>
+          <h2>룩북 · 트렌드</h2>
+          <p>2025년 당산 유흥 시장 분석: 프리미엄 라운지 중심의 룩북 트렌드가 주류를 형성하고 있습니다. 당산역 인근 12개 주요 업소 대상 데이터 수집 결과, 고객 선호도가 높은 5가지 스타일을 선별했습니다.</p>
+          <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+            <span style="background:#ff3b00; color:#000; padding:8px 24px; font-weight:700; border:2px solid #fff;">#프리미엄라운지</span>
+            <span style="background:#ff3b00; color:#000; padding:8px 24px; font-weight:700; border:2px solid #fff;">#룩북매칭</span>
+            <span style="background:#ff3b00; color:#000; padding:8px 24px; font-weight:700; border:2px solid #fff;">#데이터분석</span>
+          </div>
+        </div>
+        <div class="overlap-block" style="transform:skewX(-2deg);">
+          <p style="font-size:3.2rem; font-family:Impact; color:#ff3b00; line-height:1;">832+</p>
+          <p style="font-size:1.1rem; margin-top:8px;">검증된 룩북 데이터 · 매일 업데이트</p>
         </div>
       </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+    </section>
+
+    <!-- UGC 리뷰 섹션 -->
+    <section id="reviews">
+      <h2>실사용자 후기</h2>
+      <p style="margin-bottom:16px;">당산 유흥 룩북을 경험한 회원님들의 솔직한 리뷰입니다. 모든 후기는 익명 처리되며 실제 이용 내역과 매칭됩니다.</p>
+      <div class="review-grid">
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span><strong>당산밤나그네</strong> · 2025-03-15</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <div class="review-body">
+            룩북 퀄리티가 진짜 차원이 다릅니다. 매니저 프로필과 실제 매칭 정확도가 95% 이상이라고 하던데, 세 번 방문 모두 설명 그대로였어요. 객관적 데이터를 원한다면 강력 추천.
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span><strong>JYP사장님</strong> · 2025-03-10</span>
+            <span class="review-stars">★★★★★</span>
+          </div>
+          <div class="review-body">
+            영업 비밀인데, 여기 트렌드 분석 보고서 보고 매장 인테리어 바꿨습니다. 매출 22% 상승. 단순 유흥 정보 그 이상이에요. 전문가 집단이라는 게 느껴집니다.
+          </div>
+        </div>
+
+        <div class="
 </body>
 </html>

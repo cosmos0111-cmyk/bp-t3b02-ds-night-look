@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당산 유흥 룩북 | 정보 · 프리미엄 유흥 정보 플랫폼</title>
+    <meta name="description" content="당산 유흥 룩북 정보 페이지. 데이터 기반 매장 검증, 업소별 실사 후기 통계, 트렌드 분석 리포트를 제공합니다. 프리미엄 유흥 정보의 기준을 확인하세요.">
+    <meta name="keywords" content="당산 유흥 룩북 정보, 당산 유흥 통계, 매장 검증, 프리미엄 유흥 정보, 실사 후기 데이터">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="author" content="T3B02 DS Night Look">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b02-ds-night-look.pages.dev/info">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="당산 유흥 룩북 | 정보 · 프리미엄 유흥 정보 플랫폼">
+    <meta property="og:description" content="데이터 기반 매장 검증과 실사 후기 통계. 프리미엄 유흥 정보의 기준을 확인하세요.">
+    <meta property="og:url" content="https://t3b02-ds-night-look.pages.dev/info">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://t3b02-ds-night-look.pages.dev/og-image-info.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* CSS 리셋 및 베이스 */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        /* 타이포그래피 시스템 — 거친 브루탈리스트 */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Archivo Black', 'Pretendard', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #f5f5f5;
+        }
+        h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; margin-bottom: 0.6em; border-bottom: 4px solid #00ffcc; display: inline-block; padding-bottom: 0.15em; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 1.8em 0 0.8em; }
+        h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin: 1.2em 0 0.5em; }
+        p, li, blockquote, figcaption { font-size: 1rem; color: #b0b0b0; max-width: 70ch; }
+        a { color: #00ffcc; text-decoration: underline; text-underline-offset: 4px; transition: color 0.15s; }
+        a:hover, a:focus { color: #ff00aa; }
+        strong, b { color: #f5f5f5; font-weight: 700; }
+        /* 컨테이너 — full bleed */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 4vw, 3rem);
+        }
+        /* 네비게이션 */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #222;
+            padding: 0.8rem 0;
+        }
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.4rem;
+            color: #00ffcc;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+        }
+        .nav-logo:hover { color: #ff00aa; }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-menu a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.12s;
+        }
+        .nav-menu a:hover,
+        .nav-menu a.active { color: #00ffcc; border-bottom: 2px solid #00ffcc; }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #ccc;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+        .hamburger:focus { outline: 2px solid #00ffcc; }
+        /* 히어로 */
+        .hero {
+            padding: 8rem 0 4rem;
+        }
+        .hero h1 { border-color: #ff00aa; }
+        .hero p { font-size: 1.2rem; margin-top: 1rem; }
+        /* 섹션 */
+        .section { padding: 3rem 0; }
+        .section-dark { background: #111; }
+        /* 카드 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #141414;
+            border: 1px solid #2a2a2a;
+            padding: 2rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .card:hover { border-color: #00ffcc; transform: translateY(-4px); }
+        .card h3 { margin-top: 0; }
+        .card .stat { font-size: 2.4rem; color: #00ffcc; font-weight: 700; }
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #222;
+            padding: 1.2rem 0;
+        }
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: #00ffcc;
+            transition: transform 0.2s;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer p { margin-top: 0.8rem; }
+        .faq-item.open .faq-question::after { transform: rotate(45deg); }
+        .faq-item.open .faq-answer { max-height: 300px; }
+        /* 푸터 */
+        .footer {
+            background: #0d0d0d;
+            border-top: 1px solid #222;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer a { color: #888; }
+        .footer a:hover { color: #00ffcc; }
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0; right: 0;
+                background: rgba(10,10,10,0.98);
+                padding: 1.5rem 2rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid #222;
+            }
+            .nav-menu.show { display: flex; }
+            .hamburger { display: block; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="nav" role="navigation" aria-label="메인 네비게이션">
+        <div class="container">
+            <a href="/" class="nav-logo">T3B02</a>
+            <button class="hamburger" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="/" role="menuitem">홈</a></li>
+                <li role="none"><a href="/info" class="active" role="menuitem">정보</a></li>
+                <li role="none"><a href="/lookbook" role="menuitem">룩북</a></li>
+                <li role="none"><a href="/reviews" role="menuitem">후기</a></li>
+                <li role="none"><a href="tel:0212345678" rel="nofollow" role="menuitem">문의</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 히어로 -->
+    <section class="hero container">
+        <h1>정보</h1>
+        <p>당산 유흥 룩북은 데이터 기반의 매장 검증과 신뢰할 수 있는 유흥 정보를 제공합니다. 프리미엄 유흥 경험을 위한 기준을 만나보세요.</p>
+    </section>
+
+    <!-- 주요 정보 섹션 -->
+    <section class="section">
+        <div class="container">
+            <h2>플랫폼 개요</h2>
+            <p>당산 유흥 룩북은 2023년 론칭 이후 당산 지역 프리미엄 유흥 업소를 대상으로 한 <strong>최초의 데이터 기반 검증 플랫폼</strong>입니다. 매월 3,500건 이상의 실사 후기와 정기적인 트렌드 분석 리포트를 통해 업계의 기준점을 제시합니다.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="stat">126</span>
+                    <h3>검증 매장</h3>
+                    <p>2025년 2월 기준, 당산 지역 126개 프리미엄 업소가 엄격한 기준을 통과했습니다.</p>
+                </div>
+                <div class="card">
+                    <span class="stat">4,800+</span>
+                    <h3>실사 후기</h3>
+                    <p>검증된 회원이 직접 작성한 후기만을 수집하여 신뢰도를 확보합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="stat">92%</span>
+                    <h3>정보 만족도</h3>
+                    <p>정기 설문조사 결과, 플랫폼 정보에 대한 사용자 만족도가 92%를 기록했습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 데이터 기반 주장 -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2>데이터 기반 정보 제공</h2>
+            <p>당산 유흥 룩북은 단순한 후기 수집을 넘어, <strong>추천 알고리즘과 정량적 지표</strong>를 결합합니다. 각 매장의 평가 항목은 청결도, 서비스 퀄리티, 프라이버시 보호, 접근성 등 8개 카테고리로 세분화되어 있으며, 실제 방문객의 평점과 플랫폼 내 활동 데이터가 가중 평균되어 공개됩니다.</p>
+            <p>또한 분기별 <strong>당산 유흥 트렌드 리포트</strong>를 발간하여 신규 오픈 매장, 인기 스타일 변화, 가격대 변동 등을 데이터 시각화와 함께 제공합니다. 이는 업계 종사자와 이용자 모두에게 객관적인 참고 자료로 활용되고 있습니다.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <h2>자주 묻는 질문</h2>
+            <div class="faq-item">
+                <div class="faq-question" role="button" tabindex="0">매장 검증 기준은 무엇인가요?</div>
+                <div class="faq-answer"><p>모든 매장은 최소 3회 이상의 실사 방문을 통해 청결, 서비스, 시설, 안전성 등 8개 항목을 평가합니다. 또한 최근 3개월 내에 부정적인 후기가 급증하거나 법적 문제
+</body>
+</html>
